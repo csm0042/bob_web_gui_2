@@ -8,11 +8,16 @@ function playSound(sound) {
 
 // Home screen refresh
 // ==========================================================
-function screenRefresh(id) {
-    systemClock('system-clock');
-    updateCurrentConditions('63122', '7857465136eaa7af')
-    updateForecast('63122', '7857465136eaa7af')
+var refreshTO;
+function screenResize() {
+    clearTimeout(refreshTO);
+    refreshTO = setTimeout(screenRefresh, 200);
 }
 
-
-
+function screenRefresh() {
+    updateMap('7857465136eaa7af', '38.6524', '-90.34', '50');
+    updateWeather('63122', '7857465136eaa7af');
+    systemClock('system-clock');
+    //updateCurrentConditions('63122', '7857465136eaa7af')
+    //updateForecast('63122', '7857465136eaa7af')
+}
