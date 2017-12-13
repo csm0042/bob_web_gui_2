@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    line-height: 1;
+    color: #fff;
+    background: #000;
+    font-size: 14px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 34px;
+    padding-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+    color: yellow;
+}
+
+
+/*  ICON BAR
+===============================================================*/
+
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 30px; /* Increased font size */
+    height: 60px;
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.active {
+    background-color: #4CAF50; /* Add an active/current color */
+}
+
+/*  MAIN WINDOW
+===============================================================*/
+
+.usable-window {
+    width: calc(100vw - 30px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.window-content {
+    height: calc(100vh - 90px);
+    width: 100%;
+}
+
+.calendar {
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forecast-box {
+    float: left;
+    height: 420px;
+    width: 620px;
+    background: #555555;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.current-conditions {
+    float: left;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 22px;
+    line-height: 120%;
+}
+
+.forecast-condition-keys {
+    float: left;
+    text-align: right;
+    color: yellow;
+    width: 25%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 10px;
+    font-size: 22px;
+    line-height: 120%;
+}
+
+.forecast-condition-values {
+    float: left;
+    width: 10%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 10px;
+    font-size: 22px;
+    line-height: 120%;
+}
+
+.forecast-condition-units {
+    float: left;
+    width: 15%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 10px;
+    font-size: 22px;
+    line-height: 120%;
+}
+
+.forecast-day {
+    float: left;
+    width: 15%;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.forecast-date {
+    float: left;
+    width: 10%;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.forecast-summary {
+    float: left;
+    width: 75%;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+
+
+.image-box {
+    float: left;
+    height: auto;
+    width: auto;
+    background: #555555;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.radar {
+    width: auto;
+    height: auto;
+}
+
+
+@media only screen and (min-width: 2001px) {
+    .image-box {
+        float: left;
+        height: auto;
+        width: auto;
+        background: #555555;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 10px;
+    }
+
+    .radar {
+        width: auto;
+        height: auto;
+    }
+}
+
+.time-bar {
+    position: fixed;
+    bottom: 10px;
+    height: 26px;
+    width: calc(100vw - 30px);
+    background: #555555;
+    padding-top: 5px;
+    padding-right: 5px;
+    text-align: right;
+}

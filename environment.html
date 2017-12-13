@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang-"en-US">
+    <head>
+        <title>Building Operating Bot (B.O.B.)</title>     
+        <meta charset="UTF-8">   
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" media="screen and (max-width: 500px)" href="css/bob.css" />
+        <link rel="stylesheet" media="screen and (min-width: 501px) and (max-width: 1000px)" href="css/bob.css" />
+        <link rel="stylesheet" media="screen and (min-width: 1001px)" href="css/bob.css" />
+        <link rel="stylesheet" href="fonts/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <script src="js/clock.js"></script>
+        <script src="js/environment.js"></script>
+        <script src="js/weather.js"></script>
+
+
+
+
+    </head>
+
+    <body onload="screenRefresh('none')">
+        <div class="usable-window">
+            <!-- HEADER / MENU -->
+            <div class="icon-bar">
+                <a href="index.html"><i class="fa fa-cogs"></i></a> 
+                <a href="home.html"><i class="fa fa-home"></i></a> 
+                <a href="environment.html" class="active"><i class="fa fa-thermometer"></i></a>
+                <a href="map.html"><i class="fa fa-map"></i></a>
+                <a href="calendar.html"><i class="fa fa-calendar"></i></a>
+            </div>
+
+            <!-- WINDOW CONTENT -->
+            <div class="window-content">
+                <div class="forecast-box">
+                    <div class="current-conditions">
+                        <p><strong>Today</strong></p>
+                        <p id=forecastSummary0>??</p>
+                        <p><strong>Tonight</strong></p>
+                        <p id=forecastSummary1>??</p>
+                    </div>
+                    <br>
+                    <div class="forecast-condition-keys">
+                        <p>Temperature: </p>
+                        <p>Rel Humidity: </p>
+                        <p>Wind Speed: </p>
+                        <p>Wind Gusts: </p>
+                        <p>Direction: </p>
+                    </div>
+                    <div class="forecast-condition-values">
+                        <p id="curTemp">?? </p>
+                        <p id="relHumid">?? </p>
+                        <p id="windSpeed">?? </p>
+                        <p id="windGust">?? </p>
+                        <p id="windDir">?? </p>
+                    </div>
+                    <div class="forecast-condition-units">
+                        <p>F </p>
+                        <p>% </p>
+                        <p>mph </p>
+                        <p>mph </p>
+
+                    </div>
+                    <div class="forecast-condition-keys">
+                        <p>Feels Like: </p>
+                        <p>Dew Point: </p>
+                        <p>Precip 1hr: </p>
+                        <p>Precip Tot: </p>
+
+                    </div>
+                    <div class="forecast-condition-values">
+                        <p id="feelsLike">?? </p>
+                        <p id="dewPoint">?? </p>
+                        <p id="precip1hr">?? </p>
+                        <p id="precipTot">?? </p>
+
+                    </div>
+                    <div class="forecast-condition-units">
+                        <p>F </p>
+                        <p>F </p>
+                        <p>in </p>
+                        <p>in </p>
+
+                    </div>
+                </div>
+                <div class="forecast-box">
+                    <div class="forecast-day">
+                        <p>Friday</p>
+                        <p>Saturday</p>
+                        <p>Sunday</p>
+                        <p>Monday</p>
+                        <p>Tuesday</p>
+                        <p>Wednesday</p>
+                        <p>Thursday</p>
+                        <p>Friday</p>
+                        <p>Saturday</p>
+                        <p>Sunday</p>
+                    </div>
+                    <div class="forecast-date">
+                        <p>12/8</p>
+                        <p>12/9</p>
+                        <p>12/10</p>
+                        <p>12/11</p>
+                        <p>12/12</p>
+                        <p>12/13</p>
+                        <p>12/14</p>
+                        <p>12/15</p>
+                        <p>12/16</p>
+                        <p>12/17</p>
+                    </div>
+                    <div class="forecast-summary">
+                        <p>Sunny.  High 40F, low 28F</p>
+                        <p>AM Clouds/PM Sun.  High 35F, low 22F</p>
+                        <p>Sunny.  High 51F, low 32F</p>
+                        <p>Partly cloudy.  High 55F, low 28F</p>
+                        <p>Sunny.  High 40F, low 28F</p>
+                        <p>AM Clouds/PM Sun.  High 35F, low 22F</p>
+                        <p>Sunny.  High 51F, low 32F</p>
+                        <p>Partly cloudy.  High 55F, low 28F</p>
+                        <p>Sunny.  High 51F, low 32F</p>
+                        <p>Partly cloudy.  High 55F, low 28F</p>
+                    </div>
+
+                </div>            
+                <div class="image-box">
+                    <image class="radar" src="http://api.wunderground.com/api/7857465136eaa7af/animatedradar/image.gif?centerlat=38.6524&centerlon=-90.3179&radius=20&width=600&height=400&newmaps=1&rainsnow=1&smooth=1&noclutter=1&timelabel=1&timelabel.y=10&num=5&delay=100"></image>
+                </div>
+                <div class="image-box">
+                    <image class="radar" src="http://api.wunderground.com/api/7857465136eaa7af/animatedradar/image.gif?centerlat=38.6524&centerlon=-90.3179&radius=100&width=600&height=400&newmaps=1&rainsnow=1&smooth=1&noclutter=1&timelabel=1&timelabel.y=10&num=5&delay=100"></image>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="time-bar">
+                <p id="system-clock">time</p>
+            </div>
+
+        </div>
+    
+    </body>
+</html>
